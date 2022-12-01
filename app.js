@@ -14,13 +14,13 @@ var Interval;
 var tens = 0;
 var minutes = 0;
 //Audio Playing function
-let audioPlay = () => {
+let audioPlay = async() => {
     wave.classList.add('activeNow');
     play.style.display = 'none';
     pause.style.display = 'inline';
     clearInterval(Interval);
     Interval = setInterval(startTimer, 1000);
-    audio.play();
+    await audio.play();
     console.log(audio.duration);
 }
 let songs = ['Sawaar Loon', 'Galliyan', 'Jeene Laga Hoon', 'Teri Meri Kahaani', 'Samjhawan', 'I Love You'];
@@ -94,14 +94,14 @@ let song7Title = document.getElementById('song7Title');
 let song8Title = document.getElementById('song8Title');
 let songIDs = [song1Title,song2Title,song3Title,song4Title,song5Title,song6Title,song7Title,song8Title];
 
-search.onkeydown252389 = (e) =>{
+search.onkeyup = (e) =>{
     songIDs.forEach(ele =>{
         let val = ele.innerHTML;
         if(!val.startsWith(e.target.value)){
             ele.parentElement.style.display = 'none';            
         }
         console.log(e.target.value);
-    });
+    });``
 }
 
 //Song Playing function

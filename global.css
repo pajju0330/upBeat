@@ -146,10 +146,10 @@ header {
 }
 @media screen and (max-width : 500px) {
   .nav-links {
-    font-size: 8px;
+    font-size: 10px;
     font-weight: 400;
     margin-left: -39px;
-    width: 100px;
+    width: 130px;
     /* padding-bottom: 10px; */
     color: #4c5262;
     cursor: pointer;
@@ -339,6 +339,16 @@ header .player .time{
 }
 
 @media screen and (max-width:500px) {
+  header .player {
+    /* border: 3px solid #fff; */
+    padding-right: 100px;
+  }
+  .bi-skip-start-fill{
+    display: none;
+  }
+  .bi-skip-end-fill{
+    display: none;
+  }
   header .player h5 {
     /* border: 3px solid #fff; */
     width: 130px;
@@ -348,11 +358,11 @@ header .player .time{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 8px;
+    font-size: 10px;
   }
   header .player .subtitle {
     /* border: 2px solid #fff; */
-    font-size: 8px;
+    font-size: 10px;
     margin-left: 14px;
     margin-top: -8px;
     color: #4c5262;
@@ -360,7 +370,23 @@ header .player .time{
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-  
+  header .player .bar {
+    display: none;
+  }
+  .time{
+    display: none;
+  }
+  .currentEnd{
+    display: none;
+  }
+  .bi-play-circle{
+    margin-left: 50px;
+    /* border: 2px solid white; */
+  }
+  .bi-pause-circle{
+    margin-left: 50px;
+    /* border: 2px solid white; */
+  }
   
 }
 
@@ -530,20 +556,37 @@ header .songs .content #display{
   height:  60vh;
   margin: 50px 0px;
   margin-left: -220px;
+  grid-template-columns: repeat(4,18rem);
 } 
-
-@media screen and (min-width:768px) {
-  header .songs .content .display{
-    /* border: 2px solid red; */
-    grid-template-columns: repeat(4,18rem);
-  }
+.forMobile{
+  display: none;
 }
-@media screen and (max-width:500px) {
-  header .songs .content {
+@media screen and (max-width: 500px){
+  header .songs .content #display{
     display: none;
   }
+  .forMobile{
+    display:flex;
+    margin: 10px;
+    font-size: 10px;
+    border: 2px solid whitesmoke;
+    margin-left: -220px;
+    margin-top: -90px;
+  }
+  .forMobile .name{
+    /* border: 2px solid white; */
+    /* margin-right: 30px; */
+    font-size: 10px;
+  }
+  .forMobile .button{
+    border-radius: 20px;
+    border-color: #36e2e6;
+    margin-right: 12px;
+    color: #36e2e6;
+    width: 40px;
+    /* letter-spacing: 1px; */
+  }
 }
-
 header .songs .content .display .songList{
   /* border: 2px solid whitesmoke; */
   width: 10rem;
